@@ -56,3 +56,15 @@ span {
 .messages-svg {
   overflow: visible;
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .home,
+  .notifications,
+  .messages {
+    padding: 2rem 0.5rem;
+  }
+}
