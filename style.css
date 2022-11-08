@@ -27,6 +27,10 @@ h1 {
   /* overflow: hidden; */
 }
 
+svg {
+  cursor: pointer;
+}
+
 span {
   background: linear-gradient(260deg, #65c0d3, #6a9eec);
   background-clip: text;

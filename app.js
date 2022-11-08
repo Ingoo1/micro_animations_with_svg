@@ -45,12 +45,30 @@ function ready() {
   const spanTextFirst = document.querySelector('.first');
   const spanTextCenter = document.querySelector('.center');
   const spanTextLast = document.querySelector('.last');
+  const home = document.querySelector('.home-svg');
+  const notifications = document.querySelector('.notifications-svg');
+  const messages = document.querySelector('.messages-svg');
 
   tl.fromTo(
     '.container',
     { scale: 0.5, borderRadius: 0, borderRadius: '50%', rotate: -15 },
     { scale: 1, duration: 1, borderRadius: '45px', rotate: 0 }
   );
+
+  gsap.set('.feather', { scale: 0, transformOrigin: 'center' });
+  home.addEventListener('click', () => {
+    gsap.fromTo(
+      '.home-svg',
+      { scale: 1 },
+      { scale: 0.9, yoyo: true, repeat: 1 }
+    );
+    gsap.fromTo(
+      '.feather',
+      { y: -5, scale: 0 },
+      { y: 20, scale: 1.5, duration: 1, stagger: 0.2 }
+    );
+    gsap.fromTo('.right-feather', { x: 0 }, { x: 5 });
+  });
 
   animateTitle(tl);
   splitText(spanTextFirst.textContent.split(''), spanTextFirst);
