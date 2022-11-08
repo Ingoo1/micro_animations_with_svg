@@ -18,7 +18,22 @@ body {
   color: black;
   padding: 5rem;
   border-radius: 2rem;
+  box-shadow: 0 0 15px #ccc;
 }
+
+h1 {
+  /* color: #ccc; */
+  text-align: center;
+  /* overflow: hidden; */
+}
+
+span {
+  background: linear-gradient(260deg, #65c0d3, #6a9eec);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .home,
 .notifications,
 .messages {
